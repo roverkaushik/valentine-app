@@ -1,0 +1,105 @@
+/* ===== Global Page Background ===== */
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+
+    /* 🔹 Custom background image */
+    background-image: url("/images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ===== Main Card ===== */
+.container {
+    margin-top: 80px;
+    padding: 20px 24px;
+    background: rgba(0, 0, 0, 0.5); /* dark overlay for readability */
+    border-radius: 18px;
+    display: inline-block;
+    max-width: 90%;
+}
+
+/* ===== Buttons Wrapper ===== */
+.buttons {
+    margin-top: 40px;
+    position: relative;
+    height: 180px;
+}
+
+/* ===== Buttons ===== */
+button {
+    padding: 14px 28px;
+    font-size: 18px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* YES Button */
+#yesBtn {
+    background: linear-gradient(135deg, #4CAF50, #66bb6a);
+    color: white;
+}
+
+/* NO Button */
+#noBtn {
+    background: linear-gradient(135deg, #f44336, #ff7961);
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ===== Result Text ===== */
+.hidden {
+    display: none;
+}
+
+#result {
+    margin-top: 30px;
+    font-size: 26px;
+}
+
+/* ===== Floating Hearts ===== */
+.heart {
+    position: absolute;
+    bottom: -30px;
+    font-size: 26px;
+    animation: floatUp 4s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+/* ===== Mobile Optimization ===== */
+@media (max-width: 600px) {
+    .container {
+        margin-top: 60px;
+        padding: 18px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px 22px;
+    }
+
+    #result {
+        font-size: 22px;
+    }
+}

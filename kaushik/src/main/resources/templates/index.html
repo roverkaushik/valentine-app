@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Valentine 💖</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<audio id="bgMusic" preload="auto" loop>
+    <source th:src="@{/music/love.mp3}" type="audio/mpeg">
+</audio>
+
+
+<div class="container">
+    <h1>💘 Will you be my Valentine?</h1>
+
+    <div class="buttons">
+        <button id="yesBtn" onclick="sayYes()">YES 💖</button>
+        <button id="noBtn">NO 😅</button>
+    </div>
+
+    <h2 id="result" class="hidden">
+        Yayyy!! 🥰💌  
+        You just made my heart explode ❤️
+    </h2>
+</div>
+
+<script th:src="@{/js/valentine.js}"></script>
+</body>
+</html>
